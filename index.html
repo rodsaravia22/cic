@@ -1,0 +1,187 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colegio Inglés Católico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Imagen de fondo para el inicio */
+    #inicio {
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=1920&q=80') no-repeat center center/cover;
+    }
+    /* Mejor contraste para texto secundario en inicio */
+    #inicio p {
+      color: #D1D5DB; /* gris claro para mejor visibilidad */
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    }
+  </style>
+</head>
+<body class="font-[Poppins] bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 bg-blue-900 text-white shadow-lg z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#inicio" class="text-2xl font-bold tracking-wide hover:text-blue-300">Inglés Católico</a>
+      <ul class="hidden md:flex space-x-8 font-medium">
+        <li><a href="#inicio" class="hover:text-blue-300 transition">Inicio</a></li>
+        <!-- Visión eliminada del menú -->
+        <li><a href="#mision" class="hover:text-blue-300 transition">Misión</a></li>
+        <li><a href="#cursos" class="hover:text-blue-300 transition">Cursos</a></li>
+        <li><a href="#ayuda" class="hover:text-blue-300 transition">Ayuda</a></li>
+        <li><a href="#contacto" class="hover:bg-white hover:text-blue-900 px-4 py-1 rounded transition font-semibold">Contacto</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa móvil -->
+      <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Abrir menú">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="menu" class="hidden md:hidden bg-blue-800">
+      <ul class="flex flex-col space-y-2 px-6 py-4 text-white font-medium">
+        <li><a href="#inicio" class="block py-2 hover:text-blue-300">Inicio</a></li>
+        <!-- Visión eliminada del menú móvil -->
+        <li><a href="#mision" class="block py-2 hover:text-blue-300">Misión</a></li>
+        <li><a href="#cursos" class="block py-2 hover:text-blue-300">Cursos</a></li>
+        <li><a href="#ayuda" class="block py-2 hover:text-blue-300">Ayuda</a></li>
+        <li><a href="#contacto" class="block py-2 hover:bg-white hover:text-blue-900 rounded font-semibold">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- HERO / INICIO -->
+  <section id="inicio" class="h-screen flex flex-col justify-center items-center text-center px-6 text-white backdrop-brightness-75">
+    <h1 class="text-5xl sm:text-6xl font-extrabold drop-shadow-lg max-w-4xl leading-tight mb-6">Aprende con Propósito en el Colegio Inglés Católico</h1>
+    <p class="text-lg max-w-2xl mb-10">Desarrollamos habilidades y valores en cada estudiante para un futuro brillante.</p>
+
+    <!-- Botones vistosos -->
+    <div class="flex gap-6">
+      <a href="#cursos" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold shadow-lg transition">Ver Cursos</a>
+    </div>
+  </section>
+
+  <!-- MISIÓN -->
+  <section id="mision" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-blue-900">Nuestra Misión</h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Brindamos educación de calidad que forma integralmente a nuestros estudiantes, combinando excelencia académica y valores cristianos.</p>
+  </section>
+
+  <!-- CURSOS -->
+  <section id="cursos" class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center text-blue-900">Nuestros Cursos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Inicial -->
+      <div tabindex="0" role="button" onclick="location.href='curso-inicial.html'" class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?fit=crop&w=800&q=80" alt="Curso Inicial" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-900">Inicial</h3>
+          <p class="text-gray-700">Inicio del camino educativo con técnicas lúdicas y formativas.</p>
+        </div>
+      </div>
+
+      <!-- Primaria -->
+      <div tabindex="0" role="button" onclick="location.href='curso-primaria.html'" class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500">
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?fit=crop&w=800&q=80" alt="Curso Primaria" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-900">Primaria</h3>
+          <p class="text-gray-700">Desarrollo académico sólido con enfoque formativo.</p>
+        </div>
+      </div>
+
+      <!-- Secundaria (imagen actualizada) -->
+      <div tabindex="0" role="button" onclick="location.href='curso-secundaria.html'" class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500">
+        <img src="https://www.campuseducacion.com/blog/wp-content/uploads/2019/09/foto03.jpg" alt="Estudiantes en secundaria" class="h-48 w-full object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-blue-900">Secundaria</h3>
+          <p class="text-gray-700">Preparación integral para los desafíos del mundo moderno.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AYUDA -->
+  <section id="ayuda" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6 text-blue-900">¿Necesitas Ayuda?</h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Si tienes dudas sobre el proceso de inscripción, cursos o necesitas asistencia, contáctanos directamente o visita nuestras redes sociales.</p>
+    <a href="#contacto" class="mt-8 inline-block bg-blue-900 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition">Ir a Contacto</a>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-16 px-6 bg-blue-50">
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <!-- Formulario -->
+      <div class="p-8">
+        <h2 class="text-2xl font-bold mb-6 text-blue-900">Contáctanos</h2>
+        <form id="contact-form" class="space-y-6" novalidate>
+          <input name="Nombre" type="text" placeholder="Nombre" required class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+          <input name="Email" type="email" placeholder="Correo electrónico" required class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+          <input name="Teléfono" type="tel" placeholder="Teléfono (opcional)" class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+          <textarea name="Mensaje" placeholder="Escribe tu mensaje..." rows="5" required class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+          <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded-full font-semibold hover:bg-blue-700 transition">Enviar mensaje</button>
+          <p id="form-message" class="mt-3 text-center text-sm"></p>
+        </form>
+      </div>
+      <!-- Datos de contacto -->
+      <div class="p-8 bg-blue-100 text-blue-900">
+        <h3 class="text-xl font-semibold mb-4">Datos de Contacto</h3>
+        <p><strong>Email:</strong> alums.oscargutierrez@inglescatolico.bo</p>
+        <p><strong>Ubicación:</strong> La Paz, Bolivia</p>
+        <p class="mt-6 font-semibold">Horario de atención:</p>
+        <ul class="list-disc list-inside text-blue-900 space-y-1">
+          <li>Lun–Vie: 9:00 – 22:00</li>
+          <li>Sábado: 9:00 – 18:00</li>
+          <li>Domingo: 9:00 – 12:00</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-blue-900 text-white text-center py-6">
+    &copy; 2025 Colegio Inglés Católico. Todos los derechos reservados.
+  </footer>
+
+  <!-- Script para simular envío de formulario -->
+  <script>
+    const form = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      if (!formData.get('Nombre') || !formData.get('Email') || !formData.get('Mensaje')) {
+        formMessage.textContent = 'Por favor, completa todos los campos requeridos.';
+        formMessage.className = 'text-red-600';
+        return;
+      }
+
+      formMessage.textContent = 'Enviando mensaje...';
+      formMessage.className = 'text-blue-600';
+
+      setTimeout(() => {
+        formMessage.textContent = '¡Mensaje enviado exitosamente! Nos contactaremos contigo pronto.';
+        formMessage.className = 'text-green-600';
+        form.reset();
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
